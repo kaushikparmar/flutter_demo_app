@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
   // A Separate Function called from itemBuilder
   Widget buildBody(BuildContext context, int index) {
     String name = isNotEmpty(listItems[index]["Khabar_Title"]) ? listItems[index]["Khabar_Title"]: "";
-    dynamic pic = isNotEmpty(listItems[index]["Pic"]) ? new Image.network(listItems[index]["Pic"], width: 100.0, height: 100.0,): new Image.asset('assets/images/avatar.png', height: 100.0, width: 100.0,);
+    dynamic pic = isNotEmpty(listItems[index]["Pic"]) ? new Image.network(listItems[index]["Pic"], fit: BoxFit.fill,): new Image.asset('assets/images/avatar.png', fit: BoxFit.fill,);
     String date = isNotEmpty(listItems[index]["Khabar_Date"]) ? DateFormat("yyyy-MM-dd").format(DateTime.parse(listItems[index]["Khabar_Date"])): "";
     return new Container(
         width: MediaQuery.of(context).size.width,
@@ -100,7 +100,11 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               new ListTile(
-                leading: pic,
+                leading: new Container(
+                  child: pic,
+                  width: 80.0,
+                  height: 80.0,
+                ),
                 title: Text(name),
                 subtitle: Text(date),
                 onTap: () {
