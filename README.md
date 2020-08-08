@@ -1,6 +1,6 @@
-# demo
+# Demo
 
-A new Flutter project.
+A new Flutter Demo For ListView with dynamic data binding with live API integration.
 
 ## Getting Started
 
