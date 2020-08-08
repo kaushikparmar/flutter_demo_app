@@ -91,8 +91,13 @@ class _MyItemDetailsState extends State<MyItemDetails> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              args.pic,
               new Container(
+                  child: args.pic,
+                  width: 150.0,
+                  height: 150.0,
+              ),
+              new Container(
+                width: 300.0,
                 margin: EdgeInsets.all(5.0),
                 child: new Text(args.name, style: TextStyle(fontSize: 18.0,),),
               ),
