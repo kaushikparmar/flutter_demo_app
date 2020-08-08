@@ -101,6 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               new ListTile(
                 leading: new Container(
+                  alignment: Alignment.topCenter,
                   child: pic,
                   width: 80.0,
                   height: 80.0,
